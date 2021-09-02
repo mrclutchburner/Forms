@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+  </head>
+  <style>
+    body,
+    html {
+      height: 100%;
+      font-family: Arial, Helvetica, sans-serif;
+      color: rgb(43, 42, 42);
+    }
+    div.background {
+      max-height: auto;
+      max-width: auto;
+    }
+    * {
+      box-sizing: border-box;
+      float: center;
+    }
+    a {
+      text-decoration: none;
+    }
+    .main {
+      width: 100%;
+      height: max-content;
+    }
+    div.polariod {
+      padding-top: 1.5%;
+      padding-left: 0px;
+    }
+
+    /* Add styles to the form container */
+    .container {
+      margin: 10px;
+      width: 350px;
+      height: 500px;
+      padding: 10px;
+      background-color: rgb(7, 171, 212) !important;
+      border-style: solid;
+      border-color: transparent;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+        0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+    /* Full-width input fields */
+    input[type="text"],
+    input[type="password"] {
+      width: 90%;
+      padding: 15px;
+      margin: 5px 0 22px 0;
+      border: none;
+      background: #f5f7fa;
+      border-radius: 4px;
+    }
+
+    input[type="text"]:focus,
+    input[type="password"]:focus {
+      background-color: #e8eaec;
+      outline: none;
+      border-radius: 4px;
+    }
+
+    /* Set a style for the submit button */
+    .btn {
+      background-color: #074f8a;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      cursor: pointer;
+      width: 30%;
+      opacity: 0.9;
+      border-radius: 4px;
+    }
+    .btn:hover {
+      color: black;
+      background-color: white;
+    }
+
+    .btn:hover {
+      opacity: 1;
+    }
+    .footer {
+      color: gray;
+    }
+  </style>
+  <body>
+    <div class="main">
+      <div class="polariod" align="center">
+        <div class="container">
+          <form action="/action_page.php">
+            <a href="ileco.html">
+              <img
+                src="logo/logo.png"
+                alt="Logo"
+                class="avatar"
+                width="180px"
+                height="170px"
+                padding-top="2px"
+                padding-down="2px"
+            /></a>
+            <div class="card-body">
+              <input
+                type="text"
+                style="text-align: center"
+                placeholder="User ID"
+                name="email"
+                required
+              />
+              <input
+                type="password"
+                style="text-align: center"
+                placeholder="Password"
+                name="psw"
+                required
+              />
+
+              <div class="row align-items-center remember">
+                <input type="checkbox" />Remember Me
+              </div>
+              <ul></ul>
+              <div class="form-group">
+                <input type="submit" value="LOG IN" class="btn login_btn" />
+              </div>
+              <ul></ul>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <br />
+    <div class="footer" align="center">
+      <ul>
+        &copy; 2021. All rights reserved.
+        
+      </ul>
+    </div>
+  </body>
+</html>

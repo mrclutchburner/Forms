@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New Applicant</title>
+    <style>
+      body {
+        font-family: "Inter";
+        height: auto;
+        display: center;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(5, 170, 170, 0.589);
+        color: rgb(78, 78, 78);
+      }
+
+      #main {
+        width: fit-content;
+        height: 100%;
+        transition: margin-left 0.2s;
+        margin-right: 5px;
+        padding: 16px;
+        background-color: white;
+        border-radius: 8px;
+      }
+      #btn{
+        float:right;
+        padding-right: 20px;
+      }
+      #form {
+        width: fit-content;
+        height: 100%;
+        transition: margin-left 0.2s;
+        margin-right: 5px;
+        padding: 16px;
+        background-color: rgba(201, 241, 231, 0.877);
+        border-radius: 8px;
+      }
+      .form-element {
+        display: inline-table;
+        flex-direction: column;
+        margin: 15px;
+      }
+      a {
+        text-decoration: none;
+        color: darkslategrey;
+      }
+      input,
+      textarea {
+        border: 1px solid #d0d2e2;
+        width: 250px;
+        line-height: 1.9;
+        padding: 10px;
+        border-radius: 8px;
+      }
+      .sidenav {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: rgb(17, 44, 70);
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+      }
+
+      .sidenav a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+      }
+
+      .sidenav a:hover {
+        color: #f1f1f1;
+      }
+
+      .sidenav .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+      }
+
+      @media screen and (max-height: 450px) {
+        .sidenav {
+          padding-top: 15px;
+        }
+        .sidenav a {
+          font-size: 18px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <br />
+
+    <div class="main">
+      <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+          >&times;</a
+        >
+        <a href="Entry.html">Information</a>
+        <a href="Record.html">MCO Data</a>
+        <a href="#">Clients</a>
+        <a href="#">Contact</a>
+      </div>
+    </div>
+    <div id="main">
+      <span style="font-size: 25px; cursor: pointer" onclick="openNav()"
+        >&#9776; MENU 
+        <div id="btn">
+          <button>Logout</button>
+        </div><br>
+      </span>
+      <h1>Reg Form</h1>
+      <hr />
+      <br />
+    <div id="form">
+        <p><h2>MCO Information</h2></p>
+      <div class="form-element">
+        <span>First Name</span><br />
+        <input type="text" required placeholder="FirstName" />
+      </div>
+      <div class="form-element">
+        <span>Middle Name</span><br />
+        <input type="text" required placeholder="Middle Name" />
+      </div>
+      <div class="form-element">
+        <span>Last Name</span><br />
+        <input type="text" required placeholder="Last Name" />
+      </div>
+      <div class="form-element">
+        <span>Extention Name</span><br />
+        <select name="Extention Name" id="Extention Name">
+          <option value=""></option>
+          <option value="Jr.">Jr.</option>
+          <option value="Sr.">Sr.</option>
+          <option value="I">I</option>
+          <option value="II">II</option>
+          <option value="III">III</option>
+        </select>
+      </div>
+      <div class="form-element">
+        <form action="/action_page.php">
+          <span>Birthday</span><br />
+          <input type="date" id="birthday" />
+        </form>
+      </div>
+      <div class="form-element">
+        <form action="/action_page.php">
+          <span>Contact Number</span><br />
+          <input type="text" required placeholder="Enter Contacts" />
+        </form>
+      </div>
+      <div class="form-element">
+        <form action="/action_page.php">
+          <span>Account Number</span><br />
+          <input type="text" required placeholder="Enter Account" />
+        </form>
+      </div>
+      <div class="form-element">
+        <span>Gender</span><br />
+        <select name="Gender" id="Gender">
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+          <option value="Others">Others</option>
+        </select>
+      </div>
+      <div class="form-element">
+        <span>Civil Status</span><br />
+        <select name="Civil Status" id="Select">
+          <option value="single">Single</option>
+          <option value="married">Married</option>
+        </select>
+      </div>
+      <div><h2>Address</h2></div>
+      <div class="form-element">
+        <span>Baragay</span><br />
+        <input type="text" required placeholder="Enter Baragay" />
+      </div>
+      <div class="form-element">
+        <span>Town</span><br />
+        <input type="text" required placeholder="Enter Town" />
+      </div>
+      <div class="form-element">
+        <span>City</span><br />
+        <input type="text" required placeholder="Enter City" />
+      </div>
+    </div>
+    </div>
+
+    <script>
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+      }
+
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("main").style.marginLeft = "0";
+      }
+    </script>
+  </body>
+</html>
